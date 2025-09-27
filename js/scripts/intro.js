@@ -3,8 +3,17 @@
       const introVideo = document.getElementById("introVideo");
       const content = document.getElementById("content");
 
+      function endIntro() {
+        intro.classList.add("fade-out");
+        setTimeout(() => {
+          intro.remove();
+          content.classList.add("show");
+        }, 1000);
+        sessionStorage.setItem("introPlayed", "true");
+      }
+
       if (sessionStorage.getItem("introPlayed")) {
-        intro.classList.add("hidden");
+        intro.remove();
         content.classList.add("show");
       } else {
         introVideo.play().catch(err => {
@@ -12,7 +21,7 @@
 
           const playBtn = document.createElement("button");
           playBtn.id = "playBtn";
-          playBtn.textContent = "Play Intro";
+          playBtn.textContent = "▶️ Play Intro";
           document.body.appendChild(playBtn);
 
           playBtn.addEventListener("click", () => {
@@ -21,15 +30,6 @@
           });
         });
 
-        introVideo.addEventListener("ended", () => {
-          intro.classList.add("fade-out");
-
-          setTimeout(() => {
-            intro.classList.add("hidden");
-            content.classList.add("show");
-          }, 1000);
-
-          sessionStorage.setItem("introPlayed", "true");
-        });
+        introVideo.addEventListener("ended", endIntro);
       }
     });

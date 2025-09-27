@@ -15,6 +15,8 @@
     <script src="./js/jquery/jquery-3.7.1.js"></script>
     <script type="module" src="./js/scripts/aro.js"></script>
     <script type="module" src="./js/scripts/intro.js"></script>
+    <script type="module" src="./js/scripts/folder1.js"></script>
+    <script type="module" src="./js/scripts/video.js"></script>
   </head>
   <body>
     <div class="static__img"></div>
@@ -28,19 +30,47 @@
           Your browser does not support the video tag.
         </video>
         </div>
+      <div id="videoOverlay">
+        <span id="closeBtn">&times;</span>
+        <video id="previewVideo" controls></video>
+      </div>
         <div class="main__section">
             <div class="main__folder">
-                <button id="btn"><img src="./files/img/folder.png" alt=""></button>
+                <button id="folder1"><img src="./files/img/folder.png" alt=""></button>
                 <h3>Pictures</h3>
             </div>
             <div class="main__folder">
-                <button id="btn"><img src="./files/img/folder.png" alt=""></button>
+                <button id="folder2"><img src="./files/img/folder.png" alt=""></button>
                 <h3>Files</h3>
             </div>
             <div class="main__folder">
-                <button id="btn"><img src="./files/img/folder.png" alt=""></button>
+                <button id="folder3"><img src="./files/img/folder.png" alt=""></button>
                 <h3>Folder</h3>
             </div>
+        </div>
+          <div class="main__folder-section">
+            <div class="main__folder-section-header">
+              <button id="minimizeFolder1">_</button>
+              <button id="maximizeFolder1">[]</button>
+              <button id="closeFolder1">&times;</button>
+            </div>
+            <div class="main__folder-section-box"> 
+              <button id="preview1"><img src="files/img/preview3.png"></button>
+              <p>Incident - h232</p>
+            </div>
+            <div class="main__folder-section-box">
+              <button id="preview2"><img src="./files/img/preview4.png"></button>
+              <p>Our newest invention</p>
+            </div>
+            <div class="main__folder-section-box">
+              <button id="preview3"><img src="./files/img/preview2.png"></button>
+              <p>Incident - h433</p>
+            </div>
+            <div class="main__folder-section-box">
+              <button id="preview4"><img src="./files/img/preview1.png"></button>
+              <p>Incident - b413</p>
+            </div>
+          </div>
         </div>
           <div class="main__footer-section">
             <h1>Welcome to ARO OS</h1>
