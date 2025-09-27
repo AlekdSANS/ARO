@@ -16,7 +16,10 @@
     <script type="module" src="./js/scripts/aro.js"></script>
     <script type="module" src="./js/scripts/intro.js"></script>
     <script type="module" src="./js/scripts/folder1.js"></script>
+    <script type="module" src="./js/scripts/folder2.js"></script>
     <script type="module" src="./js/scripts/video.js"></script>
+    <script type="module" src="./js/scripts/pdf.js"></script>
+    <script type="module" src="./js/scripts/audio.js"></script>
   </head>
   <body>
     <div class="static__img"></div>
@@ -30,6 +33,17 @@
           Your browser does not support the video tag.
         </video>
         </div>
+         <div id="pdfOverlay">
+        <div id="pdfContainer">
+          <span id="closePdf">&times;</span>
+          <embed id="pdfViewer" src="" type="application/pdf" />
+        </div>
+      </div> 
+      <div id="audioOverlay">
+        <span id="closeBtn">&times;</span>
+        <div id="audioTitle">Now Playing</div>
+        <audio id="previewAudio" controls></audio>
+      </div>
       <div id="videoOverlay">
         <span id="closeBtn">&times;</span>
         <video id="previewVideo" controls></video>
@@ -37,7 +51,7 @@
         <div class="main__section">
             <div class="main__folder">
                 <button id="folder1"><img src="./files/img/folder.png" alt=""></button>
-                <h3>Pictures</h3>
+                <h3>Videos</h3>
             </div>
             <div class="main__folder">
                 <button id="folder2"><img src="./files/img/folder.png" alt=""></button>
@@ -48,27 +62,50 @@
                 <h3>Folder</h3>
             </div>
         </div>
-          <div class="main__folder-section">
-            <div class="main__folder-section-header">
+          <div class="main__folder-section1">
+            <div class="main__folder-section-header1">
               <button id="minimizeFolder1">_</button>
               <button id="maximizeFolder1">[]</button>
               <button id="closeFolder1">&times;</button>
             </div>
-            <div class="main__folder-section-box"> 
+            <div class="main__folder-section-box1"> 
               <button id="preview1"><img src="files/img/preview3.png"></button>
               <p>Incident - h232</p>
             </div>
-            <div class="main__folder-section-box">
+            <div class="main__folder-section-box1">
               <button id="preview2"><img src="./files/img/preview4.png"></button>
               <p>Our newest invention</p>
             </div>
-            <div class="main__folder-section-box">
+            <div class="main__folder-section-box1">
               <button id="preview3"><img src="./files/img/preview2.png"></button>
               <p>Incident - h433</p>
             </div>
-            <div class="main__folder-section-box">
+            <div class="main__folder-section-box1">
               <button id="preview4"><img src="./files/img/preview1.png"></button>
               <p>Incident - b413</p>
+            </div>
+          </div>
+          <div class="main__folder-section2">
+            <div class="main__folder-section-header2">
+              <button id="minimizeFolder1">_</button>
+              <button id="maximizeFolder1">[]</button>
+              <button id="closeFolder1">&times;</button>
+            </div>
+            <div class="main__folder-section-box2"> 
+              <button id="file1" data-pdf="./files/doc/ARO-2710-RU.pdf"><img src="./files/img/pdf.png"></button>
+            <p>ARO-2710-RU.pdf</p>
+            </div>
+            <div class="main__folder-section-box2">
+              <button id="file2" data-pdf="./files/doc/ARO-8761.pdf"><img src="./files/img/pdf.png"></button>
+              <p>ARO-8760.pdf</p>
+            </div>
+            <div class="main__folder-section-box2">
+              <button id="file3" data-pdf="./files/doc/ARO-0923.pdf"><img src="./files/img/pdf.png"></button>
+              <p>ARO-0923</p>
+            </div>
+            <div class="main__folder-section-box2">
+              <button id="sound1"><img src="./files/img/mp3.png"></button>
+              <p>sound1.mp3</p>
             </div>
           </div>
         </div>

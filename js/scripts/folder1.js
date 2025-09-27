@@ -1,5 +1,5 @@
 $(function(){
-  const folder1 = $(".main__folder-section");
+  const folder1 = $(".main__folder-section1");
 
   folder1.css({ 
     scale: "0.1",
