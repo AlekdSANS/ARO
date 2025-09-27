@@ -53,10 +53,9 @@ img {
 }
 
 .main__footer-section{
-    position: absolute;
-    left: 30px;
-    top: 570px;
-    width: 1000px ;
+    position: relative;
+    left: 20px;
+    width: 1000px;
     height: 500px;
     background-color: #1b1b1b;
     border-radius: 16px;
@@ -66,7 +65,7 @@ img {
 .main__footer-section-footer{
     overflow: hidden;
     position: relative;
-    top:282px;
+    top:305px;
     height: 100px;
     border-radius: 16px;
     width: 1000px;
