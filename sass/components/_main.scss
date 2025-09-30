@@ -49,6 +49,10 @@
     margin-top: 8px;
 }
 
+
+
+//FOLDER-Section_________________________________________
+
 .main__folder-section1{
     position: absolute;
     top: -400px;
@@ -225,10 +229,13 @@
     color: #fff;
 }
 
-
 img {
     background-color: transparent;
 }
+
+
+
+//FOOTER-menu_________________________________________
 
 .main__footer-section{
     position: relative;
@@ -287,6 +294,9 @@ img {
 }
 
 
+
+//VIDEO_________________________________________
+
 #videoOverlay {
     position: absolute;
     top: 0;
@@ -299,7 +309,6 @@ img {
     align-items: center;
     z-index: 9000;
 }
-
 
 #videoOverlay video {
     position: absolute;
@@ -314,6 +323,9 @@ img {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
 }
 
+
+
+//PDF_________________________________________
 
 #closeBtn {
     position: absolute;
@@ -338,7 +350,6 @@ img {
     z-index: 9000;
 }
 
-    
 #pdfContainer {
     top: 10%;
     left: 10%;  
@@ -368,6 +379,10 @@ img {
     cursor: pointer;
     z-index: 10000;
 }
+
+
+
+//AUDIO_________________________________________
 
 #audioOverlay {
     position: absolute;
