@@ -317,14 +317,17 @@ img {
   color: #fff;
 }
 
-.main__footer-section h1 {
+.main__footer-section-header {
+  height: 350px;
+  position: absolute;
   margin: 20px;
+  background-color: aqua;
 }
 
 .main__footer-section-footer {
   overflow: hidden;
-  position: relative;
-  top: 280px;
+  position: absolute;
+  top: 400px;
   height: 100px;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
@@ -347,7 +350,7 @@ img {
   color: #fff;
 }
 
-.main__footer-section-footer button {
+.main__footer-section-footer-rightbox button {
   padding-right: 40px;
   margin-left: 10px;
   background-color: transparent;
@@ -359,10 +362,47 @@ img {
   justify-content: space-between;
 }
 
-.main__footer-section-footer button:hover {
+.main__footer-section-footer-rightbox button:hover {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   transition: background-color 0.3s ease-in-out;
+}
+
+.main__footer-section-footer-leftbox {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+}
+
+.main__footer-section-footer-leftbox button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  justify-content: center;
+}
+
+.main__footer-section-footer-leftbox button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.main__user {
+  top: 50px;
+  left: 600px;
+  position: absolute;
+  width: 1200px;
+  height: 800px;
+  background-color: black;
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: #2c2c2c;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
 }
 
 #videoOverlay {
