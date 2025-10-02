@@ -1,110 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARO</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"/>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <!-- Preload intro video -->
+    <link rel="preload" as="video" href="./files/mp4/ARO_ARIVE_02.mp4" type="video/mp4">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./main.css" />
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script src="./js/jquery/jquery-3.7.1.js"></script>
-    <script type="module" src="./js/scripts/aro.js"></script>
+    <!-- Preload critical fonts -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700&display=swap" media="print" onload="this.media='all'">
+    <!-- Load non-critical fonts asynchronously -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Montserrat+Alternates:ital,wght@0,400;0,700&display=swap" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'">
+    <!-- Fallback for browsers that don't support preload -->
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Montserrat+Alternates:ital,wght@0,400;0,700&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </noscript>
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
+    <script src="./js/jquery/jquery-3.7.1.js" defer></script>
     <script type="module" src="./js/scripts/intro.js"></script>
-    <script type="module" src="./js/scripts/folder1.js"></script>
-    <script type="module" src="./js/scripts/folder2.js"></script>
-    <script type="module" src="./js/scripts/video.js"></script>
-    <script type="module" src="./js/scripts/pdf.js"></script>
-    <script type="module" src="./js/scripts/audio.js"></script>
+    <script type="module" src="./js/scripts/aro.js" defer></script>
+    <script type="module" src="./js/scripts/folder1.js" defer></script>
+    <script type="module" src="./js/scripts/folder2.js" defer></script>
+    <script type="module" src="./js/scripts/video.js" defer></script>
+    <script type="module" src="./js/scripts/pdf.js" defer></script>
+    <script type="module" src="./js/scripts/audio.js" defer></script>
   </head>
   <body>
+    <!-- Static background image -->
     <div class="static__img"></div>
+
+    <!-- Header section -->
     <header class="header">
     </header>
 
+    <!-- Main content section -->
     <section class="main">
+      <!-- Intro video section -->
       <div id="intro">
-        <video id="introVideo" autoplay>
+        <video id="introVideo" autoplay preload="auto" playsinline>
           <source src="./files/mp4/ARO_ARIVE_02.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
-        </div>
-         <div id="pdfOverlay">
+      </div>
+      <!-- PDF viewer overlay -->
+      <div id="pdfOverlay">
         <div id="pdfContainer">
-          <span id="closePdf">&times;</span>
-          <embed id="pdfViewer" src="" type="application/pdf" />
+          <span id="closePdfBtn">&times;</span>
+          <embed id="pdfViewer" type="application/pdf">
         </div>
       </div> 
+
+      <!-- Audio player overlay -->
       <div id="audioOverlay">
-        <span id="closeBtn">&times;</span>
+        <span id="closeAudioBtn">&times;</span>
         <div id="audioTitle">Now Playing</div>
         <audio id="previewAudio" controls></audio>
       </div>
+
+      <!-- Video player overlay -->
       <div id="videoOverlay">
-        <span id="closeBtn">&times;</span>
+        <span id="closeVideoBtn">&times;</span>
         <video id="previewVideo" controls></video>
       </div>
+        <!-- Main desktop folder section -->
         <div class="main__section">
             <div class="main__folder">
-                <button id="folder1"><img src="./files/img/folder.png" alt=""></button>
+                <button id="folder1"><img src="./files/img/folder.png" alt="Folder icon" width="128" height="128"></button>
                 <h3>Videos</h3>
             </div>
+
             <div class="main__folder">
-                <button id="folder2"><img src="./files/img/folder.png" alt=""></button>
+                <button id="folder2"><img src="./files/img/folder.png" alt="Folder icon" width="128" height="128"></button>
                 <h3>Files</h3>
             </div>
+
             <div class="main__folder">
-                <button id="folder3"><img src="./files/img/folder.png" alt=""></button>
+                <button id="folder3"><img src="./files/img/folder.png" alt="Folder icon" width="128" height="128"></button>
                 <h3>Folder</h3>
             </div>
         </div>
+          <!-- Videos folder content section -->
           <div class="main__folder-section1">
+            <!-- Folder window controls -->
             <div class="main__folder-section-header1">
-              <button id="minimizeFolder1">_</button>
-              <button id="maximizeFolder1">[]</button>
-              <button id="closeFolder1">&times;</button>
+              <button id="minimizeVideoFolder">_</button>
+              <button id="maximizeVideoFolder">[]</button>
+              <button id="closeVideoFolder">&times;</button>
             </div>
+
+            <!-- Video preview items -->
             <div class="main__folder-section-box1"> 
-              <button id="preview1"><img src="./files/img/preview3.png"></button>
+              <button id="preview1"><img src="./files/img/preview3.png" alt="Preview thumbnail" width="120" height="120" loading="lazy"></button>
               <p>Incident - h232</p>
             </div>
+
             <div class="main__folder-section-box1">
-              <button id="preview2"><img src="./files/img/preview4.png"></button>
+              <button id="preview2"><img src="./files/img/preview4.png" alt="Preview thumbnail" width="120" height="120" loading="lazy"></button>
               <p>Our newest invention</p>
             </div>
+
             <div class="main__folder-section-box1">
-              <button id="preview3"><img src="./files/img/preview2.png"></button>
+              <button id="preview3"><img src="./files/img/preview2.png" alt="Preview thumbnail" width="120" height="120" loading="lazy"></button>
               <p>Incident - h433</p>
             </div>
+
             <div class="main__folder-section-box1">
-              <button id="preview4"><img src="./files/img/preview1.png"><!--<svg class="pr1"><use href="./files/img/svg/zaza-defs.svg#icon-preview1"></use></svg>--></button>
+              <button id="preview4"><img src="./files/img/preview1.png" alt="Preview thumbnail" width="120" height="120" loading="lazy"></button>
               <p>Incident - b413</p>
             </div>
           </div>
+          <!-- Files folder content section -->
           <div class="main__folder-section2">
+            <!-- Folder window controls -->
             <div class="main__folder-section-header2">
-              <button id="minimizeFolder1">_</button>
-              <button id="maximizeFolder1">[]</button>
-              <button id="closeFolder1">&times;</button>
+              <button id="minimizeFilesFolder">_</button>
+              <button id="maximizeFilesFolder"><!--<img src="./files/img/svg/box.svg" alt="Minimalize box">-->[]</button>
+              <button id="closeFilesFolder">&times;</button>
             </div>
+
+            <!-- PDF and audio files -->
             <div class="main__folder-section-box2"> 
-              <button id="file1" data-pdf="./files/doc/ARO-2710-RU.pdf"><img src="./files/img/pdf.png"></button>
-            <p>ARO-2710-RU.pdf</p>
+              <button id="file1" data-pdf="./files/doc/ARO-2710-RU.pdf"><img src="./files/img/pdf.png" alt=""></button>
+              <p>ARO-2710-RU.pdf</p>
             </div>
+
             <div class="main__folder-section-box2">
-              <button id="file2" data-pdf="./files/doc/ARO-8761.pdf"><img src="./files/img/pdf.png"></button>
+              <button id="file2" data-pdf="./files/doc/ARO-8761.pdf"><img src="./files/img/pdf.png" alt=""></button>
               <p>ARO-8760.pdf</p>
             </div>
+
             <div class="main__folder-section-box2">
-              <button id="file3" data-pdf="./files/doc/ARO-0923.pdf"><img src="./files/img/pdf.png"></button>
+              <button id="file3" data-pdf="./files/doc/ARO-0923.pdf"><img src="./files/img/pdf.png" alt=""></button>
               <p>ARO-0923</p>
             </div>
+
             <div class="main__folder-section-box2">
-              <button id="sound1"><img src="./files/img/mp3.png"></button>
+              <button id="sound1"><img src="./files/img/mp3.png" alt=""></button>
               <p>sound1.mp3</p>
             </div>
           </div>
@@ -114,46 +153,56 @@
             <button id="maximizeFolder1">[]</button>
             <button id="closeFolder1">&times;</button>
         </div>-->
+          <!-- Welcome section with user profile -->
           <div class="main__footer-section">
+            <!-- Welcome message -->
             <div class="main__footer-section-header">
               <h1>Welcome to ARO OS</h1>
               <p>Your journey to a new experience starts here.</p>
             </div>
+
+            <!-- User profile and power button -->
             <div class="main__footer-section-footer">
               <div class="main__footer-section-footer-rightbox">
-                <button id="profile"><img src="./files/img/profile-user.png"><h2>Artur Morgan</h2></button>
+                <button id="profile"><img src="./files/img/profile-user.png" alt=""><h2>Artur Morgan</h2></button>
               </div>
               <div class="main__footer-section-footer-leftbox">
-                <button id="power"><img src="./files/img/power.png"></button>
+                <button id="power"><img src="./files/img/power.png" alt=""></button>
               </div>
             </div>
         </div>
     </section>
 
 
+    <!-- Footer taskbar -->
     <footer class="footer">
+      <!-- Logo and search section -->
       <div class="footer__logo">
-      <button id="aro"><img class="aro__logo" src="./files/img/letter-a (1).png" alt=""></button>
+        <button id="aro"><img class="aro__logo" src="./files/img/letter-a.png" alt=""></button>
         <div class="footer__search-box">
-            <i class="fa fa-search"></i>
-            <input type="text" placeholder="Type here to search">
+          <i class="fa fa-search"></i>
+          <input type="text" placeholder="Type here to search">
         </div>
       </div>
+
+      <!-- Program shortcuts -->
       <div class="footer__programs">
-      <button id="btn"><img class="footer__program-img" src="./files/img/internet.png" alt=""></button>
-      <button id="btn"><img class="footer__program-img" id="reverse" src="./files/img/house (1).png" alt=""></button>
-      <button id="btn"><img class="footer__program-img" src="./files/img/visual-studio.png" alt=""></button>
-      <button id="profile"><img class="footer__program-img" id="reverse" src="./files/img/manager.png" alt=""></button>
-      <button id="btn"><img class="footer__program-img" src="./files/img/vision.png" alt=""></button>
+        <button id="browserBtn"><img class="footer__program-img" src="./files/img/internet.png" alt="Browser"></button>
+        <button id="homeBtn"><img class="footer__program-img" id="reverse" src="./files/img/house_black.png" alt="Home"></button>
+        <button id="vsCodeBtn"><img class="footer__program-img" src="./files/img/visual-studio.png" alt="Visual Studio"></button>
+        <button id="profileBtn"><img class="footer__program-img" id="reverse" src="./files/img/manager.png" alt="Profile"></button>
+        <button id="visionBtn"><img class="footer__program-img" src="./files/img/vision.png" alt="Vision"></button>
       </div>
+
+      <!-- System tray -->
       <div class="footer__sidebar">
-      <button id="btn"><img class="footer__sidebar-img" id="reverse" src="./files/img/up-arrow.png" alt=""></button>
-      <button id="btn"><img class="footer__sidebar-img" id="reverse" src="./files/img/wifi.png" alt=""></button>
-      <button id="btn"><img class="footer__sidebar-img" id="reverse" src="./files/img/volume.png" alt=""></button>
-      <div class="footer__datetime">
-        <span class="footer__date">01.01.2024</span>
-        <span class="footer__time">12:00</span>
-      </div>
+        <button id="upArrowBtn"><img class="footer__sidebar-img" id="reverse" src="./files/img/up-arrow.png" alt="Up"></button>
+        <button id="wifiBtn"><img class="footer__sidebar-img" id="reverse" src="./files/img/wifi.png" alt="WiFi"></button>
+        <button id="volumeBtn"><img class="footer__sidebar-img" id="reverse" src="./files/img/volume.png" alt="Volume"></button>
+        <div class="footer__datetime">
+          <span class="footer__date">01.01.2024</span>
+          <span class="footer__time">12:00</span>
+        </div>
       </div>
     </footer>
   </body>
