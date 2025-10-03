@@ -41,6 +41,7 @@
   object-fit: contain;
   background: transparent;
   display: block;
+  -webkit-user-drag: none;
 }
 
 .main__folder h3 {
@@ -82,7 +83,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  user-select: none;
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);
@@ -115,6 +115,8 @@
     width: 120px;
     height: 120px;
     border-radius: 16px;
+    background-color: transparent;
+    -webkit-user-drag: none;
   }
 }
 
@@ -187,6 +189,7 @@
   background: transparent;
   border-style: none;
   margin-bottom: 10px;
+  user-drag: none;
 }
 
 .main__folder-section-box2 p {
@@ -204,6 +207,7 @@
   width: 120px;
   height: 120px;
   border-radius: 16px;
+  -webkit-user-drag: none;
 }
 
 .main__folder-section-header2 {
@@ -231,10 +235,6 @@
   color: #fff;
 }
 
-img {
-  background-color: transparent;
-}
-
 //FOOTER-menu_________________________________________
 
 .main__footer-section {
@@ -247,6 +247,7 @@ img {
   border: 1px solid;
   border-color: #2c2c2c;
   color: #fff;
+  -webkit-user-drag: none;
 }
 
 .main__footer-section-header {
@@ -276,6 +277,7 @@ img {
   height: 64px;
   margin: 18px 20px;
   filter: invert(0.9);
+  -webkit-user-drag: none;
 }
 
 .main__footer-section-footer h2 {

@@ -32,13 +32,15 @@
     <script type="module" src="./js/scripts/video.js" defer></script>
     <script type="module" src="./js/scripts/pdf.js" defer></script>
     <script type="module" src="./js/scripts/audio.js" defer></script>
+    <script type="module" src="./js/scripts/selection.js" defer></script>
   </head>
   <body>
-    <!-- Static background image -->
-    <div class="static__img"></div>
-
     <!-- Header section -->
     <header class="header">
+      <!-- Static background image -->
+      <div class="static__img"></div>
+      <!-- Blue selection box -->
+      <div id="selectionBox"></div>
     </header>
 
     <!-- Main content section -->
@@ -148,12 +150,13 @@
             </div>
           </div>
         </div>
+          <!-- Worker information section/app -->
         <!--<div class="main__user">
-            <button id="minimizeFolder1">_</button>
-            <button id="maximizeFolder1">[]</button>
-            <button id="closeFolder1">&times;</button>
+            <button id="minimizeUserProfile">_</button>
+            <button id="maximizeUserProfile">[]</button>
+            <button id="closeUserProfile">&times;</button>
         </div>-->
-          <!-- Welcome section with user profile -->
+          <!-- Welcome section with computer user profile -->
           <div class="main__footer-section">
             <!-- Welcome message -->
             <div class="main__footer-section-header">

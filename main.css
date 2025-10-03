@@ -77,6 +77,27 @@ body {
           user-select: none;
 }
 
+.static__img {
+  position: fixed;
+  width: 1920px;
+  height: 1080px;
+  opacity: 0.1;
+  left: 50%;
+  pointer-events: none;
+  background: url("./files/gif/static_noise.gif");
+  transform: translate(-50%, 0);
+  z-index: 9999;
+}
+
+#selectionBox {
+  position: absolute;
+  border: 2px dashed #00aaff;
+  background: rgba(0, 170, 255, 0.2);
+  display: none;
+  pointer-events: none;
+  z-index: 9999;
+}
+
 .main {
   background-image: url("files/img/wallpaper.jpg");
   width: 1920px;
@@ -122,6 +143,7 @@ body {
   object-fit: contain;
   background: transparent;
   display: block;
+  -webkit-user-drag: none;
 }
 
 .main__folder h3 {
@@ -162,9 +184,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 .main__folder-section-box1:hover {
   background-color: rgba(255, 255, 255, 0.1);
@@ -194,6 +213,8 @@ body {
   width: 120px;
   height: 120px;
   border-radius: 16px;
+  background-color: transparent;
+  -webkit-user-drag: none;
 }
 
 .main__folder-section-header1 {
@@ -247,6 +268,7 @@ body {
   background: transparent;
   border-style: none;
   margin-bottom: 10px;
+  user-drag: none;
 }
 
 .main__folder-section-box2 p {
@@ -264,6 +286,7 @@ body {
   width: 120px;
   height: 120px;
   border-radius: 16px;
+  -webkit-user-drag: none;
 }
 
 .main__folder-section-header2 {
@@ -291,10 +314,6 @@ body {
   color: #fff;
 }
 
-img {
-  background-color: transparent;
-}
-
 .main__footer-section {
   position: relative;
   left: 20px;
@@ -305,6 +324,7 @@ img {
   border: 1px solid;
   border-color: #2c2c2c;
   color: #fff;
+  -webkit-user-drag: none;
 }
 
 .main__footer-section-header {
@@ -336,6 +356,7 @@ img {
   height: 64px;
   margin: 18px 20px;
   filter: invert(0.9);
+  -webkit-user-drag: none;
 }
 
 .main__footer-section-footer h2 {
@@ -548,6 +569,7 @@ img {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
+  -webkit-user-drag: none;
 }
 
 .footer__logo {
@@ -556,6 +578,10 @@ img {
   align-items: center;
   justify-content: flex-start;
   padding: 0 20px;
+}
+
+.footer__logo img {
+  -webkit-user-drag: none;
 }
 
 .footer__logo button {
@@ -573,6 +599,7 @@ img {
   height: 64px;
   opacity: 0.9;
   filter: hue-rotate(60deg) saturate(120%) brightness(100%);
+  -webkit-user-drag: none;
 }
 
 .footer__programs {
@@ -587,6 +614,7 @@ img {
 .footer__program-img {
   width: 64px;
   height: 64px;
+  -webkit-user-drag: none;
 }
 
 .footer__programs button {
@@ -616,6 +644,7 @@ img {
 .footer__sidebar-img {
   width: 30px;
   height: 30px;
+  -webkit-user-drag: none;
 }
 
 .footer__sidebar button {
