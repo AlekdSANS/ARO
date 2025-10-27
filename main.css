@@ -86,12 +86,25 @@ body {
   z-index: 9999;
 }
 
+.blue__screen {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0;
+}
+
 .main {
   background-image: url("files/img/wallpaper.jpg");
   width: 1920px;
   height: 980px;
   margin: auto;
   position: relative;
+  overflow: hidden;
 }
 
 .main__folder {
