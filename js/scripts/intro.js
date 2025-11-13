@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const playBtn = document.createElement("button");
       playBtn.id = "playBtn";
-      playBtn.textContent = "▶️ Play Intro";
+      playBtn.textContent = "Play Intro";
       document.body.appendChild(playBtn);
 
       playBtn.addEventListener("click", () => {
