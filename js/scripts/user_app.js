@@ -1,24 +1,24 @@
 $(function () {
-  const folder2 = $(".main__folder-section2");
+  const userApp = $(".main__user");
 
-  folder2.css({
+  userApp.css({
     scale: "0.1",
     width: "100px",
     height: "100px",
-    left: "100px",
-    top: "150px",
+    left: "800px",
+    top: "950px",
     opacity: 0,
     "pointer-events": "none",
   });
 
-  $("#folder2, #closeFilesFolder, #minimizeFilesFolder").on(
+  $("#profileBtn, #closeUserProfile, #minimizeUserProfile").on(
     "click",
     function () {
-      if (folder2.css("opacity") == 0) {
-        folder2.css("pointer-events", "auto").animate(
+      if (userApp.css("opacity") == 0) {
+        userApp.css("pointer-events", "auto").animate(
           {
-            top: "60px",
-            left: "600px",
+            top: "10px",
+            left: "200px",
             width: "1160px",
             height: "800px",
             scale: "1",
@@ -27,10 +27,10 @@ $(function () {
           400
         );
       } else {
-        folder2.animate(
+        userApp.animate(
           {
-            top: "150px",
-            left: "100px",
+            top: "950px",
+            left: "800px",
             width: "100px",
             height: "100px",
             scale: "0.1",
@@ -38,7 +38,7 @@ $(function () {
           },
           400,
           function () {
-            folder2.css("pointer-events", "none");
+            userApp.css("pointer-events", "none");
           }
         );
       }

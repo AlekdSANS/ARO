@@ -4,7 +4,7 @@ body {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   background-color: #121212;
-  margin-top: 120px;
+  margin-top: 80px;
 }
 
 #intro {
@@ -220,18 +220,18 @@ body {
 
 .main__folder-section-header1 {
   width: 100%;
-  height: 40px;
+  height: 50px;
   background-color: #0f0f0f;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
+  border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 10px;
 }
 .main__folder-section-header1 button {
-  width: 40px;
-  height: 30px;
+  width: 70px;
+  height: 50px;
   padding: 0;
   border: none;
   background: transparent;
@@ -240,6 +240,19 @@ body {
   justify-content: center;
   cursor: pointer;
   color: #fff;
+}
+
+#closeVideoFolder:hover {
+  background-color: red;
+  transition: background-color 0.3s ease-in-out;
+  border-top-right-radius: 16px;
+}
+
+#maximizeVideoFolder:hover,
+#minimizeVideoFolder:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .main__folder-section-box2 {
@@ -292,19 +305,19 @@ body {
 
 .main__folder-section-header2 {
   width: 100%;
-  height: 40px;
+  height: 50px;
   background-color: #0f0f0f;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
+  border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 10px;
 }
 
-.main__folder-section-header2 button {
-  width: 40px;
-  height: 30px;
+#closeFilesFolder {
+  width: 70px;
+  height: 50px;
   padding: 0;
   border: none;
   background: transparent;
@@ -313,6 +326,31 @@ body {
   justify-content: center;
   cursor: pointer;
   color: #fff;
+}
+#closeFilesFolder:hover {
+  background-color: red;
+  transition: background-color 0.3s ease-in-out;
+  border-top-right-radius: 16px;
+}
+
+.main__folder-section-header2 #maximizeFilesFolder,
+.main__folder-section-header2 #minimizeFilesFolder {
+  width: 70px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+}
+.main__folder-section-header2 #maximizeFilesFolder:hover,
+.main__folder-section-header2 #minimizeFilesFolder:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .main__footer-section {
@@ -412,18 +450,92 @@ body {
 }
 
 .main__user {
-  top: 50px;
-  left: 600px;
   position: absolute;
-  width: 1200px;
-  height: 800px;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   border-radius: 16px;
-  border: 1px solid;
-  border-color: #2c2c2c;
   color: #fff;
   align-items: center;
   justify-content: center;
+}
+
+.main__user-header {
+  width: 100%;
+  height: 50px;
+  background-color: #0f0f0f;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#closeUserProfile {
+  width: 70px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+}
+#closeUserProfile:hover {
+  background-color: red;
+  transition: background-color 0.3s ease-in-out;
+  border-top-right-radius: 16px;
+}
+
+.main__user-header #maximizeUserProfile,
+.main__user-header #minimizeUserProfile {
+  width: 70px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+}
+.main__user-header #maximizeUserProfile:hover,
+.main__user-header #minimizeUserProfile:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.main__user-info {
+  width: 94%;
+  height: 300px;
+  padding: 40px;
+  color: #000;
+  font-size: 18px;
+  line-height: 1.6;
+  display: flex;
+}
+
+.main__user-info h1 {
+  margin-left: 40px;
+  font-size: 36px;
+  color: #000;
+}
+
+.main__user-info-box {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main__user-info img {
+  width: 300px;
+  height: 300px;
+  border-radius: 400px;
+  -webkit-user-drag: none;
 }
 
 #closeVideoBtn {

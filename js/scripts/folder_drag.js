@@ -9,32 +9,31 @@ $(function () {
   // Get the selection box element
   const selectionBox = document.getElementById("selectionBox");
 
-  $(".main__folder-section-header1, .main__folder-section-header2").on(
-    "mousedown",
-    function (event) {
-      event.preventDefault();
+  $(
+    ".main__folder-section-header1, .main__folder-section-header2, .main__user-header"
+  ).on("mousedown", function (event) {
+    event.preventDefault();
 
-      isDragging = true;
-      currentFolder = $(this).closest(
-        ".main__folder-section1, .main__folder-section2"
-      );
+    isDragging = true;
+    currentFolder = $(this).closest(
+      ".main__folder-section1, .main__folder-section2, .main__user"
+    );
 
-      initialLeft = parseInt(currentFolder.css("left")) || 0;
-      initialTop = parseInt(currentFolder.css("top")) || 0;
+    initialLeft = parseInt(currentFolder.css("left")) || 0;
+    initialTop = parseInt(currentFolder.css("top")) || 0;
 
-      offsetX = event.clientX - initialLeft;
-      offsetY = event.clientY - initialTop;
+    offsetX = event.clientX - initialLeft;
+    offsetY = event.clientY - initialTop;
 
-      if (selectionBox) {
-        selectionBox.style.display = "none";
-      }
-
-      currentFolder.css("z-index", "1");
-      $(".main__folder-section1, .main__folder-section2")
-        .not(currentFolder)
-        .css("z-index", "0");
+    if (selectionBox) {
+      selectionBox.style.display = "none";
     }
-  );
+
+    currentFolder.css("z-index", "1");
+    $(".main__folder-section1, .main__folder-section2, .main__user")
+      .not(currentFolder)
+      .css("z-index", "0");
+  });
 
   $(document).on("mousemove", function (event) {
     if (isDragging && currentFolder) {
@@ -45,17 +44,26 @@ $(function () {
 
       // Get main section boundaries
       const mainSection = $(".main");
+      const body = $("body");
+      const bodyMarginTop = parseInt(body.css("marginTop")) || 0;
+      const mainMarginTop = parseInt(mainSection.css("marginTop")) || 0;
+      const mainMarginLeft = parseInt(mainSection.css("marginLeft")) || 0;
+
       const mainBounds = {
-        left: mainSection.offset().left,
-        top: mainSection.offset().top,
-        right: mainSection.offset().left + mainSection.width(),
-        bottom: mainSection.offset().top + mainSection.height(),
+        left: mainSection.offset().left - mainMarginLeft - mainSection.width(),
+        top: mainSection.offset().top - mainMarginTop - bodyMarginTop,
+        right: mainSection.offset().left - mainMarginLeft + mainSection.width(),
+        bottom:
+          mainSection.offset().top -
+          mainMarginTop -
+          bodyMarginTop +
+          mainSection.height(),
       };
 
       // Calculate boundaries within main section
-      const maxX = mainBounds.right - currentFolder.outerWidth();
-      const maxY = mainBounds.bottom - currentFolder.outerHeight();
-      const minX = mainBounds.left;
+      const maxX = mainBounds.right + currentFolder.outerWidth();
+      const maxY = 935; // Bottom barrier to prevent going below footer
+      const minX = mainBounds.left - currentFolder.outerWidth();
       const minY = mainBounds.top;
 
       // Constrain movement within main section bounds
@@ -68,7 +76,6 @@ $(function () {
       });
     }
   });
-
   $(document).on("mouseup", function () {
     isDragging = false;
     currentFolder = null;
