@@ -12,7 +12,7 @@ $(function () {
   });
 
   $("#folder1, #closeVideoFolder, #minimizeVideoFolder").on(
-    "click",
+    "dblclick",
     function () {
       if (folder1.css("opacity") == 0) {
         folder1.css("pointer-events", "auto").animate(
