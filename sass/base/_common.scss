@@ -8,9 +8,9 @@ body {
 }
 
 #intro {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  top: 200;
+  left: 100;
   width: 1920px;
   height: 1080px;
   background-color: #121212;
@@ -19,7 +19,7 @@ body {
   align-items: center;
   z-index: 9000;
   opacity: 1;
-  transition: opacity 2s ease;
+  transition: opacity 1s ease;
 }
 
 #intro.fade-out {

@@ -8,9 +8,9 @@ body {
 }
 
 #intro {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  top: 200;
+  left: 100;
   width: 1920px;
   height: 1080px;
   background-color: #121212;
@@ -19,7 +19,7 @@ body {
   align-items: center;
   z-index: 9000;
   opacity: 1;
-  transition: opacity 2s ease;
+  transition: opacity 1s ease;
 }
 
 #intro.fade-out {
@@ -574,6 +574,7 @@ body {
   border: 4px solid #fff;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+  background-color: #000;
 }
 
 #closeAudioBtn {
@@ -683,6 +684,7 @@ body {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   -webkit-user-drag: none;
+  z-index: 8000;
 }
 
 .footer__logo {

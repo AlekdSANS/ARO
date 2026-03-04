@@ -7,6 +7,7 @@
   grid-template-columns: auto 1fr auto;
   align-items: center;
   -webkit-user-drag: none;
+  z-index: 8000;
 }
 
 .footer__logo {
