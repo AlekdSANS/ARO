@@ -1,5 +1,5 @@
 $(function () {
-  const aro = $(".main__footer-section");
+  const aro = $(".main__menu");
 
   aro.css({
     top: "60px",
@@ -19,7 +19,7 @@ $(function () {
         500,
         function () {
           aro.css("pointer-events", "none");
-        }
+        },
       );
     }
   });

@@ -71,14 +71,14 @@
     ></script>
     <script src="./js/jquery/jquery-3.7.1.js" defer></script>
     <script type="module" src="./js/scripts/intro.js"></script>
-    <script type="module" src="./js/scripts/aro.js" defer></script>
+    <script type="module" src="./js/scripts/menu.js" defer></script>
     <script type="module" src="./js/scripts/folder1.js" defer></script>
     <script type="module" src="./js/scripts/folder2.js" defer></script>
     <script type="module" src="./js/scripts/user_app.js" defer></script>
     <script type="module" src="./js/scripts/video.js" defer></script>
     <script type="module" src="./js/scripts/pdf.js" defer></script>
     <script type="module" src="./js/scripts/audio.js" defer></script>
-    <script type="module" src="./js/scripts/selection.js" defer></script>
+    <script type="module" src="./js/scripts/selection_box.js" defer></script>
     <script type="module" src="./js/scripts/folder_drag.js" defer></script>
     <script type="module" src="./js/scripts/aplication_pick.js" defer></script>
     <!--<script type="module" src="./js/scripts/aplication_pick_blue.js" defer></script>-->
@@ -122,6 +122,7 @@
         <span id="closeVideoBtn">&times;</span>
         <video id="previewVideo" controls></video>
       </div>
+
       <!-- Main desktop folder section -->
       <div class="main__section">
         <div class="main__folder">
@@ -284,32 +285,117 @@
         </div>
         <div class="main__user-info">
           <img src="./files/img/employee.png" alt="" />
-          <h1>User Profile</h1>
-          <div class="main__user-info-box">
-            <p>Name: Artur Morgan</p>
-            <p>Position: Software Engineer</p>
-            <p>Department: Development</p>
-            <p>Email:</p>
+          <div class="main__user-info-textbox">
+            <h1>User Profile</h1>
+            <div class="main__user-info-box">
+              <p>Name & Surname: Artur Morgan</p>
+              <p>Position: Software Engineer</p>
+              <p>Department: Development</p>
+              <p>Email: artur.morgan@example.com</p>
+              <p>Card-level: 3</p>
+            </div>
+          </div>
+        </div>
+        <div class="main__user-data">
+          <div class="main__user-data-content">
+            <h2>Record1</h2>
+            <ul>
+              <li>texttext</li>
+              <li>texttext</li>
+              <li>texttext</li>
+              <li>texttext</li>
+            </ul>
+            <h2>Record1</h2>
+            <ul>
+              <li>texttext</li>
+              <li>texttext</li>
+              <li>texttext</li>
+              <li>texttext</li>
+            </ul>
+            <h2>Record1</h2>
+            <ul>
+              <li>texttext</li>
+              <li>texttext</li>
+              <li>texttext</li>
+              <li>texttext</li>
+            </ul>
+            <h2>Record1</h2>
+            <ul>
+              <li>texttext</li>
+              <li>texttext</li>
+              <li>texttext</li>
+              <li>texttext</li>
+            </ul>
+            <h2>Record1</h2>
+            <ul>
+              <li>texttext</li>
+              <li>texttext</li>
+              <li>texttext</li>
+              <li>texttext</li>
+            </ul>
+            <h2>Record1</h2>
+            <ul>
+              <li>texttext</li>
+              <li>texttext</li>
+              <li>texttext</li>
+              <li>texttext</li>
+            </ul>
           </div>
         </div>
       </div>
       <!-- Welcome section with computer user profile -->
-      <div class="main__footer-section">
-        <!-- Welcome message -->
-        <div class="main__footer-section-header">
-          <h1>Welcome to ARO OS</h1>
-          <p>Your journey to a new experience starts here.</p>
-        </div>
+      <div class="main__menu">
+        <div class="main__menu-container">
 
-        <!-- User profile and power button -->
-        <div class="main__footer-section-footer">
-          <div class="main__footer-section-footer-rightbox">
+          <div class="main__menu-apps">
+
+            <div class="main__search-container">
+              <div class="main__search-box">
+                <i class="fa fa-search"></i>
+                <input type="text" placeholder="Type here to search" />
+              </div>
+            </div>
+
+            <div class="main__menu-apps-container">
+              <button id="app1">
+                <img src="./files/img/internet.png" alt="" />
+                <p>Browser</p>
+              </button>
+              <button id="app2">
+                <img src="./files/img/house_black.png" alt="" />
+                <p>Home</p>
+              </button>
+              <button id="app3">
+                <img src="./files/img/visual-studio.png" alt="" />
+                <p>Visual Studio</p>
+              </button>
+              <button id="app4">
+                <img src="./files/img/manager.png" alt="" />
+                <p>Profile</p>
+              </button>
+              <button id="app5">
+                <img src="./files/img/vision.png" alt="" />
+                <p>Vision</p>
+              </button>
+              <button id="app6">
+                <img src="./files/img/vision.png" alt="" />
+                <p>Vision</p>
+              </button>
+            </div>
+          </div>
+
+          <div class="main__menu-space"></div>
+
+          <div class="main__menu-news">fsdfsdfsdfsdfs</div>
+        <!-- Menu bar, profiles and power button -->
+        <div class="main__menu-footer">
+          <div class="main__menu-rightbox">
             <button id="profile">
               <img src="./files/img/profile-user.png" alt="" />
               <h2>Artur Morgan</h2>
             </button>
           </div>
-          <div class="main__footer-section-footer-leftbox">
+          <div class="main__menu-leftbox">
             <button id="power">
               <img src="./files/img/power.png" alt="" />
             </button>

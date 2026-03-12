@@ -10,13 +10,13 @@ $(function () {
   const selectionBox = document.getElementById("selectionBox");
 
   $(
-    ".main__folder-section-header1, .main__folder-section-header2, .main__user-header"
+    ".main__folder-section-header1, .main__folder-section-header2, .main__user-header",
   ).on("mousedown", function (event) {
     event.preventDefault();
 
     isDragging = true;
     currentFolder = $(this).closest(
-      ".main__folder-section1, .main__folder-section2, .main__user"
+      ".main__folder-section1, .main__folder-section2, .main__user",
     );
 
     initialLeft = parseInt(currentFolder.css("left")) || 0;
@@ -79,9 +79,5 @@ $(function () {
   $(document).on("mouseup", function () {
     isDragging = false;
     currentFolder = null;
-
-    if (selectionBox) {
-      selectionBox.style.display = "block";
-    }
   });
 });

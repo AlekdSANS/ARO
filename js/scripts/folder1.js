@@ -12,7 +12,7 @@ $(function () {
   });
 
   $("#folder1, #closeVideoFolder, #minimizeVideoFolder").on(
-    "dblclick",
+    "click",
     function () {
       if (folder1.css("opacity") == 0) {
         folder1.css("pointer-events", "auto").animate(
@@ -24,7 +24,7 @@ $(function () {
             scale: "1",
             opacity: 1,
           },
-          400
+          400,
         );
       } else {
         folder1.animate(
@@ -39,9 +39,9 @@ $(function () {
           400,
           function () {
             folder1.css("pointer-events", "none");
-          }
+          },
         );
       }
-    }
+    },
   );
 });

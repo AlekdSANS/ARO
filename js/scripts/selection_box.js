@@ -16,7 +16,7 @@
   function shouldIgnoreStart(target) {
     // ignore if clicking on interactive controls so they behave normally
     return !!target.closest(
-      'input, textarea, button, select, a, [contenteditable="true"]'
+      'input, textarea, button, select, a, [contenteditable="true"], .main__folder-section-header1, .main__folder-section-header2, .main__user-header, .main__user',
     );
   }
 
@@ -36,7 +36,8 @@
     selectionBox.style.top = startY + "px";
     selectionBox.style.width = "0px";
     selectionBox.style.height = "0px";
-    selectionBox.style.display = "block";
+    selectionBox.style.display = "none";
+    selectionBox.style.border = "none";
 
     // try to capture pointer so we get events even if pointer leaves the window
     try {
@@ -64,6 +65,9 @@
     document.addEventListener("keydown", onKeyDown);
   }
 
+  const Min_Drag_Distance = 5; // Minimum distance in pixels to start showing the selection box
+  let hasMovedEnough = false;
+
   function onMove(e) {
     // if pointerId exists, ignore events from other pointers
     if (!isSelecting) return;
@@ -77,15 +81,25 @@
     const curX = e.clientX;
     const curY = e.clientY;
 
-    const x = Math.min(curX, startX);
-    const y = Math.min(curY, startY);
-    const w = Math.abs(curX - startX);
-    const h = Math.abs(curY - startY);
+    const dx = Math.abs(curX - startX);
+    const dy = Math.abs(curY - startY);
+    const distance = Math.sqrt(dx * dx + dy * dy);
 
-    selectionBox.style.left = x + "px";
-    selectionBox.style.top = y + "px";
-    selectionBox.style.width = w + "px";
-    selectionBox.style.height = h + "px";
+    if (distance > Min_Drag_Distance) {
+      hasMovedEnough = true;
+      selectionBox.style.display = "block";
+      selectionBox.style.border = "2px dashed #00aaff";
+
+      const x = Math.min(curX, startX);
+      const y = Math.min(curY, startY);
+      const w = Math.abs(curX - startX);
+      const h = Math.abs(curY - startY);
+
+      selectionBox.style.left = x + "px";
+      selectionBox.style.top = y + "px";
+      selectionBox.style.width = w + "px";
+      selectionBox.style.height = h + "px";
+    }
   }
 
   function cleanupListeners() {
@@ -116,7 +130,9 @@
     }
 
     isSelecting = false;
+    hasMovedEnough = false;
     selectionBox.style.display = "none";
+    selectionBox.style.border = "none";
     selectionBox.style.width = "0px";
     selectionBox.style.height = "0px";
 
@@ -162,6 +178,6 @@
     () => {
       if (isSelecting) endSelection();
     },
-    true
+    true,
   );
 })();
