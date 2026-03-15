@@ -16,7 +16,7 @@
   function shouldIgnoreStart(target) {
     // ignore if clicking on interactive controls so they behave normally
     return !!target.closest(
-      'input, textarea, button, select, a, [contenteditable="true"], .main__folder-section-header1, .main__folder-section-header2, .main__user-header, .main__user',
+      'input, textarea, button, select, a, [contenteditable="true"], .main__folder-section-header1, .main__folder-section-header2, .main__user-header, .main__user, .main__internet-header, .main__internet',
     );
   }
 

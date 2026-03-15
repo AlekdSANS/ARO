@@ -61,3 +61,10 @@ body {
   z-index: 8000;
   user-select: none;
 }
+
+.svg-button {
+  width: 30px;
+  height: 30px;
+  filter: invert(100%);
+  user-select: none;
+}

@@ -81,6 +81,7 @@
     <script type="module" src="./js/scripts/selection_box.js" defer></script>
     <script type="module" src="./js/scripts/folder_drag.js" defer></script>
     <script type="module" src="./js/scripts/aplication_pick.js" defer></script>
+    <script type="module" src="./js/scripts/internet_app.js" defer></script>
     <!--<script type="module" src="./js/scripts/aplication_pick_blue.js" defer></script>-->
   </head>
   <body>
@@ -165,9 +166,9 @@
       <div class="main__folder-section1">
         <!-- Folder window controls -->
         <div class="main__folder-section-header1">
-          <button id="minimizeVideoFolder">_</button>
-          <button id="maximizeVideoFolder">[]</button>
-          <button id="closeVideoFolder">&times;</button>
+          <button id="minimizeVideoFolder"><img src="./files/img/svg/minimize.svg" alt="svg" class="svg-button"></button>
+          <button id="maximizeVideoFolder"><img src="./files/img/svg/maximize.svg" alt="svg" class="svg-button"></button>
+          <button id="closeVideoFolder"><img src="./files/img/svg/close.svg" alt="svg" class="svg-button"></button>
         </div>
 
         <!-- Video preview items -->
@@ -236,15 +237,14 @@
           <p>Incident - ca13</p>
         </div>
       </div>
+
       <!-- Files folder content section -->
       <div class="main__folder-section2">
         <!-- Folder window controls -->
         <div class="main__folder-section-header2">
-          <button id="minimizeFilesFolder">_</button>
-          <button id="maximizeFilesFolder">
-            <!--<img src="./files/img/svg/box.svg" alt="Minimalize box">-->[]
-          </button>
-          <button id="closeFilesFolder">&times;</button>
+          <button id="minimizeFilesFolder"><img src="./files/img/svg/minimize.svg" alt="svg" class="svg-button"></button>
+          <button id="maximizeFilesFolder"><img src="./files/img/svg/maximize.svg" alt="svg" class="svg-button"></button>
+          <button id="closeFilesFolder"><img src="./files/img/svg/close.svg" alt="svg" class="svg-button"></button>
         </div>
 
         <!-- PDF and audio files -->
@@ -276,12 +276,34 @@
           <p>sound1.mp3</p>
         </div>
       </div>
-      <!-- Worker information section/app -->
+
+      <!-- Internet app -->
+      <div class="main__internet">
+        <div class="main__internet-header">
+          <button id="minimizeInternet"><img src="./files/img/svg/minimize.svg" alt="svg" class="svg-button"></button>
+          <button id="maximizeInternet"><img src="./files/img/svg/maximize.svg" alt="svg" class="svg-button"></button>
+          <button id="closeInternet"><img src="./files/img/svg/close.svg" alt="svg" class="svg-button"></button>
+        </div>
+        <div class="main__internet-error">
+          <img src="./files/img/error.png" alt="" />
+            <h1>Unable to connect to the internet</h1>
+            <p>There is something wrong with the proxy server, or the address is incorrect.</p>
+            <p>Try:</p>
+            <ul>
+              <li>Check the proxy server settings or contact your network administrator.</li>
+              <li>Make sure the address is correct and try again.</li>
+              <li>If you are behind a firewall, make sure it is configured to allow access to the internet.</li>
+            </ul>
+            <p>ERR_PROXY_CONNECTION_FAILED</p>
+        </div>
+      </div>
+
+      <!-- Employee information app -->
       <div class="main__user">
         <div class="main__user-header">
-          <button id="minimizeUserProfile">_</button>
-          <button id="maximizeUserProfile">[]</button>
-          <button id="closeUserProfile">&times;</button>
+          <button id="minimizeUserProfile"><img src="./files/img/svg/minimize.svg" alt="svg" class="svg-button"></button>
+          <button id="maximizeUserProfile"><img src="./files/img/svg/maximize.svg" alt="svg" class="svg-button"></button>
+          <button id="closeUserProfile"><img src="./files/img/svg/close.svg" alt="svg" class="svg-button"></button>
         </div>
         <div class="main__user-info">
           <img src="./files/img/employee.png" alt="" />
@@ -378,15 +400,37 @@
                 <p>Vision</p>
               </button>
               <button id="app6">
-                <img src="./files/img/vision.png" alt="" />
-                <p>Vision</p>
+                <img src="./files/img/svg/settings.svg" alt="" />
+                <p>Settings</p>
               </button>
             </div>
           </div>
 
           <div class="main__menu-space"></div>
 
-          <div class="main__menu-news">fsdfsdfsdfsdfs</div>
+          <div class="main__menu-news">
+            <div class="main__news-box">
+              <img src="./files/img/news.png" alt="" />
+              <div class="main__news-textbox">
+                <h2>News</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.</p>
+              </div>
+            </div>
+            <div class="main__news-box">
+              <img src="./files/img/news.png" alt="" />
+              <div class="main__news-textbox">
+                <h2>News</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.</p>
+              </div>
+            </div>
+                <div class="main__news-box">
+              <img src="./files/img/news.png" alt="" />
+              <div class="main__news-textbox">
+                <h2>News</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.</p>
+              </div>
+            </div>
+          </div>
         <!-- Menu bar, profiles and power button -->
         <div class="main__menu-footer">
           <div class="main__menu-rightbox">

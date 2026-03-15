@@ -1,25 +1,25 @@
 $(function () {
-  const userApp = $(".main__user");
+  const internetApp = $(".main__internet");
 
-  userApp.css({
+  internetApp.css({
     scale: "0.1",
     width: "100px",
     height: "100px",
-    left: "800px",
+    left: "470px",
     top: "950px",
     opacity: 0,
     "pointer-events": "none",
   });
 
-  $("#profileBtn, #closeUserProfile, #minimizeUserProfile, #app4").on(
+  $("#browserBtn, #closeInternet, #minimizeInternet, #app1").on(
     "click",
     function () {
-      if (userApp.css("opacity") == 0) {
-        userApp.css("pointer-events", "auto").animate(
+      if (internetApp.css("opacity") == 0) {
+        internetApp.css("pointer-events", "auto").animate(
           {
-            top: "10px",
-            left: "200px",
-            width: "1160px",
+            top: "20px",
+            left: "500px",
+            width: "700px",
             height: "800px",
             scale: "1",
             opacity: 1,
@@ -27,10 +27,10 @@ $(function () {
           400,
         );
       } else {
-        userApp.animate(
+        internetApp.animate(
           {
             top: "950px",
-            left: "800px",
+            left: "470px",
             width: "100px",
             height: "100px",
             scale: "0.1",
@@ -38,7 +38,7 @@ $(function () {
           },
           400,
           function () {
-            userApp.css("pointer-events", "none");
+            internetApp.css("pointer-events", "none");
           },
         );
       }
