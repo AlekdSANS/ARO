@@ -984,6 +984,109 @@ body {
   color: #666;
 }
 
+.main__vision {
+  position: absolute;
+  display: flex;
+  width: 1200px;
+  height: 700px;
+  top: 100px;
+  left: 500px;
+  border-radius: 16px;
+  background-color: #000000;
+  flex-direction: column;
+  display: none;
+}
+
+.main__vision-header {
+  width: 100%;
+  height: 50px;
+  background-color: #0f0f0f;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#closeVision {
+  width: 70px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+}
+#closeVision:hover {
+  background-color: red;
+  transition: background-color 0.3s ease-in-out;
+  border-top-right-radius: 16px;
+}
+
+#maximizeVision,
+#minimizeVision {
+  width: 70px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+}
+#maximizeVision:hover,
+#minimizeVision:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.main__vision-content {
+  justify-self: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.main__vision-content-sidebar {
+  flex: 0.1;
+  height: 97%;
+  background-color: #c01818;
+  border-left: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  border-bottom-left-radius: 16px;
+}
+
+.main__vision-content-contacts {
+  flex: 0.25;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #9b6565;
+}
+
+.main__vision-content-chats {
+  flex: 1;
+  height: 100%;
+  background-color: #fcf7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom-right-radius: 16px;
+}
+
 .main__menu {
   position: relative;
   left: 20px;

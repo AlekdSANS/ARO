@@ -85,6 +85,8 @@
     <!--<script type="module" src="./js/scripts/aplication_pick_blue.js" defer></script>-->
   </head>
   <body>
+
+
     <!-- Header section -->
     <header class="header">
       <!-- Static background image -->
@@ -93,6 +95,7 @@
       <!-- Blue selection box -->
       <div id="selectionBox"></div>
     </header>
+
 
     <!-- Main content section -->
     <section class="main">
@@ -103,6 +106,8 @@
           Your browser does not support the video tag.
         </video>
       </div>
+
+
       <!-- PDF viewer overlay -->
       <div id="pdfOverlay">
         <div id="pdfContainer">
@@ -111,6 +116,7 @@
         </div>
       </div>
 
+
       <!-- Audio player overlay -->
       <div id="audioOverlay">
         <span id="closeAudioBtn">&times;</span>
@@ -118,15 +124,17 @@
         <audio id="previewAudio" controls></audio>
       </div>
 
+
       <!-- Video player overlay -->
       <div id="videoOverlay">
         <span id="closeVideoBtn">&times;</span>
         <video id="previewVideo" controls></video>
       </div>
 
+
       <!-- Main desktop folder section -->
-      <div class="main__section">
-        <div class="main__folder">
+      <section class="main__section">
+        <article class="main__folder">
           <button id="folder1">
             <img
               src="./files/img/folder.png"
@@ -136,9 +144,9 @@
             />
           </button>
           <h3>Videos</h3>
-        </div>
+        </article>
 
-        <div class="main__folder">
+        <article class="main__folder">
           <button id="folder2">
             <img
               src="./files/img/folder.png"
@@ -148,9 +156,9 @@
             />
           </button>
           <h3>Files</h3>
-        </div>
+        </article>
 
-        <div class="main__folder">
+        <article class="main__folder">
           <button id="folder3">
             <img
               src="./files/img/folder.png"
@@ -160,10 +168,12 @@
             />
           </button>
           <h3>Folder</h3>
-        </div>
-      </div>
+        </article>
+      </section>
+
+
       <!-- Videos folder content section -->
-      <div class="main__folder-section1">
+      <section class="main__folder-section1">
         <!-- Folder window controls -->
         <div class="main__folder-section-header1">
           <button id="minimizeVideoFolder"><img src="./files/img/svg/minimize.svg" alt="svg" class="svg-button"></button>
@@ -171,8 +181,9 @@
           <button id="closeVideoFolder"><img src="./files/img/svg/close.svg" alt="svg" class="svg-button"></button>
         </div>
 
+
         <!-- Video preview items -->
-        <div class="main__folder-section-box1">
+        <article class="main__folder-section-box1">
           <button id="preview1">
             <img
               src="./files/img/preview3.png"
@@ -183,9 +194,9 @@
             />
           </button>
           <p>Incident - h232</p>
-        </div>
+        </article>
 
-        <div class="main__folder-section-box1">
+        <article class="main__folder-section-box1">
           <button id="preview2">
             <img
               src="./files/img/preview4.png"
@@ -196,9 +207,9 @@
             />
           </button>
           <p>Our newest invention</p>
-        </div>
+        </article>
 
-        <div class="main__folder-section-box1">
+        <article class="main__folder-section-box1">
           <button id="preview3">
             <img
               src="./files/img/preview2.png"
@@ -209,9 +220,9 @@
             />
           </button>
           <p>Incident - h433</p>
-        </div>
+        </article>
 
-        <div class="main__folder-section-box1">
+        <article class="main__folder-section-box1">
           <button id="preview4">
             <img
               src="./files/img/preview1.png"
@@ -222,9 +233,9 @@
             />
           </button>
           <p>Incident - b413</p>
-        </div>
+        </article>
 
-        <div class="main__folder-section-box1">
+        <article class="main__folder-section-box1">
           <button id="preview5">
             <img
               src="./files/img/preview5.png"
@@ -235,11 +246,25 @@
             />
           </button>
           <p>Incident - ca13</p>
-        </div>
-      </div>
+        </article>
+
+        <article class="main__folder-section-box1">
+          <button id="preview6">
+            <img
+              src="./files/img/preview6.png"
+              alt="Preview thumbnail"
+              width="120"
+              height="120"
+              loading="lazy"
+            />
+          </button>
+          <p>Psychological weapon</p>
+        </article>
+      </section>
+
 
       <!-- Files folder content section -->
-      <div class="main__folder-section2">
+      <section class="main__folder-section2">
         <!-- Folder window controls -->
         <div class="main__folder-section-header2">
           <button id="minimizeFilesFolder"><img src="./files/img/svg/minimize.svg" alt="svg" class="svg-button"></button>
@@ -247,38 +272,40 @@
           <button id="closeFilesFolder"><img src="./files/img/svg/close.svg" alt="svg" class="svg-button"></button>
         </div>
 
+
         <!-- PDF and audio files -->
-        <div class="main__folder-section-box2">
+        <article class="main__folder-section-box2">
           <button id="file1" data-pdf="./files/doc/ARO-2710-RU.pdf">
             <img src="./files/img/pdf.png" alt="" />
           </button>
           <p>ARO-2710-RU.pdf</p>
-        </div>
+        </article>
 
-        <div class="main__folder-section-box2">
+        <article class="main__folder-section-box2">
           <button id="file2" data-pdf="./files/doc/ARO-8761.pdf">
             <img src="./files/img/pdf.png" alt="" />
           </button>
           <p>ARO-8760.pdf</p>
-        </div>
+        </article>
 
-        <div class="main__folder-section-box2">
+        <article class="main__folder-section-box2">
           <button id="file3" data-pdf="./files/doc/ARO-0923.pdf">
             <img src="./files/img/pdf.png" alt="" />
           </button>
           <p>ARO-0923</p>
-        </div>
+        </article>
 
-        <div class="main__folder-section-box2">
+        <article class="main__folder-section-box2">
           <button id="sound1">
             <img src="./files/img/mp3.png" alt="" />
           </button>
           <p>sound1.mp3</p>
-        </div>
-      </div>
+        </article>
+      </section>
+
 
       <!-- Internet app -->
-      <div class="main__internet">
+      <article class="main__internet">
         <div class="main__internet-header">
           <button id="minimizeInternet"><img src="./files/img/svg/minimize.svg" alt="svg" class="svg-button"></button>
           <button id="maximizeInternet"><img src="./files/img/svg/maximize.svg" alt="svg" class="svg-button"></button>
@@ -306,16 +333,17 @@
             </ul>
             <p>ERR_PROXY_CONNECTION_FAILED</p>
         </div>
-      </div>
+      </article>
+
 
       <!-- Employee information app -->
-      <div class="main__user">
+      <article class="main__user">
         <div class="main__user-header">
           <button id="minimizeUserProfile"><img src="./files/img/svg/minimize.svg" alt="svg" class="svg-button"></button>
           <button id="maximizeUserProfile"><img src="./files/img/svg/maximize.svg" alt="svg" class="svg-button"></button>
           <button id="closeUserProfile"><img src="./files/img/svg/close.svg" alt="svg" class="svg-button"></button>
         </div>
-        <div class="main__user-info">
+        <section class="main__user-info">
           <img src="./files/img/employee.png" alt="" />
           <div class="main__user-info-textbox">
             <h1>User Profile</h1>
@@ -327,8 +355,8 @@
               <p>Card-level: 3</p>
             </div>
           </div>
-        </div>
-        <div class="main__user-data">
+        </section>
+        <section class="main__user-data">
           <div class="main__user-data-content">
             <h2>Record1</h2>
             <ul>
@@ -373,20 +401,59 @@
               <li>texttext</li>
             </ul>
           </div>
+        </section>
+      </article>
+
+      <article class="main__vision">
+        <div class="main__vision-header">
+          <button id="minimizeVision"><img src="./files/img/svg/minimize.svg" alt="svg" class="svg-button"></button>
+          <button id="maximizeVision"><img src="./files/img/svg/maximize.svg" alt="svg" class="svg-button"></button>
+          <button id="closeVision"><img src="./files/img/svg/close.svg" alt="svg" class="svg-button"></button>
         </div>
-      </div>
-      <!-- Welcome section with computer user profile -->
-      <div class="main__menu">
+        <section class="main__vision-content">
+          <div class="main__vision-content-sidebar">
+            <button id="visionProfileBtn">
+              <img src="./files/img/profile.png" alt="" />
+              <p>Profile</p>
+            </button>
+            <button id="visionChatBtn">
+              <img src="./files/img/chat.png" alt="" />
+              <p>Chat</p>
+            </button>
+            <button id="visionGroupBtn">
+              <img src="./files/img/group.png" alt="" />
+              <p>Groups</p>
+            </button>
+          </div>
+          <div class="main__vision-content-contacts">
+            <div class="main__vision-content-contact">
+              <img src="./files/img/contacts.png" alt="" />
+              <p>Margarite</p>
+            </div>
+            <div class="main__vision-content-contact">
+              <img src="./files/img/contacts.png" alt="" />
+              <p>Bart</p>
+            </div>
+          </div>
+          <div class="main__vision-content-chats">
+
+          </div>
+        </section>
+      </article>
+
+
+      <!-- Computer user profile -->
+      <section class="main__menu">
         <div class="main__menu-container">
 
-          <div class="main__menu-apps">
+          <section class="main__menu-apps">
 
-            <div class="main__search-container">
+            <section class="main__search-container">
               <div class="main__search-box">
                 <i class="fa fa-search"></i>
                 <input type="text" placeholder="Type here to search" />
               </div>
-            </div>
+            </section>
 
             <div class="main__menu-apps-container">
               <button id="app1">
@@ -395,7 +462,7 @@
               </button>
               <button id="app2">
                 <img src="./files/img/house_black.png" alt="" />
-                <p>Home</p>
+                <p>Vision</p>
               </button>
               <button id="app3">
                 <img src="./files/img/visual-studio.png" alt="" />
@@ -407,42 +474,44 @@
               </button>
               <button id="app5">
                 <img src="./files/img/vision.png" alt="" />
-                <p>Vision</p>
+                <p>Security</p>
               </button>
               <button id="app6">
                 <img src="./files/img/svg/settings.svg" alt="" />
                 <p>Settings</p>
               </button>
             </div>
-          </div>
+          </section>
 
           <div class="main__menu-space"></div>
 
-          <div class="main__menu-news">
-            <div class="main__news-box">
+          <section class="main__menu-news">
+            <article class="main__news-box">
               <img src="./files/img/news.png" alt="" />
               <div class="main__news-textbox">
                 <h2>News</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.</p>
               </div>
-            </div>
-            <div class="main__news-box">
+            </article>
+            <article class="main__news-box">
               <img src="./files/img/news.png" alt="" />
               <div class="main__news-textbox">
                 <h2>News</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.</p>
               </div>
-            </div>
-                <div class="main__news-box">
+            </article>
+                <article class="main__news-box">
               <img src="./files/img/news.png" alt="" />
               <div class="main__news-textbox">
                 <h2>News</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.</p>
               </div>
-            </div>
-          </div>
+            </article>
+          </section>
+
+
         <!-- Menu bar, profiles and power button -->
-        <div class="main__menu-footer">
+        <section class="main__menu-footer">
           <div class="main__menu-rightbox">
             <button id="profile">
               <img src="./files/img/profile-user.png" alt="" />
@@ -454,9 +523,10 @@
               <img src="./files/img/power.png" alt="" />
             </button>
           </div>
-        </div>
-      </div>
+        </section>
+      </section>
     </section>
+
 
     <!-- Footer taskbar -->
     <footer class="footer">
@@ -471,8 +541,9 @@
         </div>
       </div>
 
+
       <!-- Program shortcuts -->
-      <div class="footer__programs">
+      <nav class="footer__programs">
         <button id="browserBtn">
           <img
             class="footer__program-img"
@@ -510,10 +581,11 @@
             alt="Vision"
           />
         </button>
-      </div>
+      </nav>
+
 
       <!-- System tray -->
-      <div class="footer__sidebar">
+      <aside class="footer__sidebar">
         <button id="upArrowBtn">
           <img
             class="footer__sidebar-img"
@@ -542,7 +614,7 @@
           <span class="footer__date">01.01.2024</span>
           <span class="footer__time">12:00</span>
         </div>
-      </div>
+      </aside>
     </footer>
   </body>
 </html>
