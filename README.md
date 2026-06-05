@@ -1,6 +1,3 @@
-<<<<<<< Updated upstream
-This is solely ARG fan project created by me as a hobby, nothing more.
-=======
 # Project ARO
 
 Project ARO is a small passion project created as a hobby and out of personal interest. It was made for an ARG and is designed as an interactive desktop-style web experience.
