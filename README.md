@@ -1,3 +1,11 @@
+<div align="center">
+
+[![Discontinued — check aro-renew](https://img.shields.io/badge/DISCONTINUED-check_aro--renew-C62828?style=for-the-badge&labelColor=C62828)](https://github.com/AlekdSANS/aro-renew)
+
+**This version is archived. Active development continues in [aro-renew](https://github.com/AlekdSANS/aro-renew).**
+
+</div>
+
 # Project ARO
 
 Project ARO is a small passion project created as a hobby and out of personal interest. It was made for an ARG and is designed as an interactive desktop-style web experience.
@@ -6,7 +14,7 @@ The project focuses on building a fictional operating-system-like interface with
 
 ## Status
 
-Project ARO is currently in progress.
+This repository is discontinued and preserved as an archive of the original implementation. The project now continues in [aro-renew](https://github.com/AlekdSANS/aro-renew).
 
 Completed core versions:
 
@@ -15,7 +23,7 @@ Completed core versions:
 - Version 0.3: One-time intro sequence, videos and files inside folders, scripts for opening media
 - Version 0.4: Draggable folders, desktop selection box, working ID application
 
-Current version:
+Final version in this repository:
 
 - Version 0.5: Application systems and code structure polish
 
@@ -30,7 +38,9 @@ Current version:
 - Working ID application
 - ARG-focused interaction design
 
-## Roadmap
+## Original Roadmap
+
+This roadmap is retained for historical context and has been superseded by [aro-renew](https://github.com/AlekdSANS/aro-renew).
 
 ### Version 0.5
 
@@ -60,8 +70,6 @@ Current version:
 
 This project is designed for one specific screen resolution and is not planned to be adapted for other resolutions.
 
-After each version, the goal is to polish the project before moving on to the next stage.
-
 ## Tech Stack
 
 - HTML
@@ -69,9 +77,7 @@ After each version, the goal is to polish the project before moving on to the ne
 - SCSS
 - JavaScript
 - jQuery
-- React planned for a future rewrite
 
 ## Purpose
 
 Project ARO is a personal hobby project made for learning, experimentation, and ARG storytelling.
->>>>>>> Stashed changes
