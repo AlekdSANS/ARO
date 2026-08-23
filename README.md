@@ -1,8 +1,8 @@
 <div align="center">
 
-[![Discontinued — check aro-renew](https://img.shields.io/badge/DISCONTINUED-check_aro--renew-C62828?style=for-the-badge&labelColor=C62828)](https://github.com/AlekdSANS/aro-renew)
+[![Discontinued — check aro-renew](https://img.shields.io/badge/DISCONTINUED-check_aro--renew-C62828?style=for-the-badge&labelColor=C62828)](https://github.com/AlekdSANS/aro-renewal)
 
-**This version is archived. Active development continues in [aro-renew](https://github.com/AlekdSANS/aro-renew).**
+**This version is archived. Active development continues in [aro-renew](https://github.com/AlekdSANS/aro-renewal).**
 
 </div>
 
@@ -14,7 +14,7 @@ The project focuses on building a fictional operating-system-like interface with
 
 ## Status
 
-This repository is discontinued and preserved as an archive of the original implementation. The project now continues in [aro-renew](https://github.com/AlekdSANS/aro-renew).
+This repository is discontinued and preserved as an archive of the original implementation. The project now continues in [aro-renew](https://github.com/AlekdSANS/aro-renewal).
 
 Completed core versions:
 
@@ -40,7 +40,7 @@ Final version in this repository:
 
 ## Original Roadmap
 
-This roadmap is retained for historical context and has been superseded by [aro-renew](https://github.com/AlekdSANS/aro-renew).
+This roadmap is retained for historical context and has been superseded by [aro-renew](https://github.com/AlekdSANS/aro-renewal).
 
 ### Version 0.5
 
